@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(#2323c2, #fff)
+}
+.container{
+    padding: 0 50px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    text-align: center;
+}
+
+.form{
+    border: 1px solid black;
+    padding: 30px 20px;
+    max-width: 700px;
+    width: auto;
+    margin: 20px auto 20px auto;
+    font-size: min(20px,2.2em);
+    background: #14144b;
+    opacity: 0.8;
+    color: aliceblue;
+}
+
+.input input{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 2rem;
+    max-width: 700px;
+}
+
+.dropdown{
+    display: block;
+    height: 2.3rem;
+    width: 101%;
+    margin-bottom: 15px;
+    max-width: 700px;
+}
+
+.radio-selection{
+    margin-top: 2rem;
+}
+.radio-selection label{
+    display: block;
+    margin-top: 5px;
+}
+
+.checkbox{
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+
+.checkbox p{
+    display: inline;
+}
+
+.checkbox label{
+    display: block;
+    margin-top: 7px;
+}
+
+h1{
+    margin-top: 1px;
+    color: aliceblue;
+    font-size: max(50px, 3em);
+}
+
+.description{
+    margin-top: -15px;
+    font-size: large;
+    color: aliceblue;
+    font-size: min(20px,2.2em);
+}
+
+textarea{
+    width: 100%;
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 1rem;
+    width: 100%;
+    height: 60px;
+    font-size: min(20px,2.2em);
+}
+
+input, select{
+    margin-top: 5px;
+}
+

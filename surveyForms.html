@@ -38,6 +38,8 @@
                             <option>Prefer not to say</option>
                         </select>
                     </div>
+                    <label for="country">What country are you from?</label>
+                    <select id="country" name="country"></select>
                     <div class="radio-selection">
                         How would you recommend freeCodeCamp to a friend?
                         <label for="recommendation">
@@ -94,6 +96,22 @@
                     </div>
                 </form>
                 <button type="submit">Submit</button>
+                <script>
+                    // Fetching the list of countries from REST Countries API
+                    fetch('https://restcountries.com/v3.1/all')
+                    .then(response => response.json())
+                    .then(data => {
+                    const countrySelect = document.getElementById('country');
+
+                    data.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.alpha3Code;
+                    option.text = country.name.common;
+                    countrySelect.add(option);
+                    });
+                })
+                .catch(error => console.error('Error fetching countries:', error));
+            </script>
             </div>
     </main>
 </div>

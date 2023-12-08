@@ -1,0 +1,134 @@
+html, body {
+    min-width: 290px;
+    color: #4d4f53;
+    background: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+@media only screen and (max-width: 815px) {
+    #navbar {
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        max-height: 275px;
+        margin: 0;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+        background: #ffffff;
+    }
+
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+
+    #main-doc {
+        position: relative;
+        margin: 270px 0 0 0;
+        border-right: 2px solid #4d4e54;
+        padding: max(80px);
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Optional: Add a transition for a smooth effect */
+    }
+
+    #main-doc {
+        padding: min(30px);
+        margin-top: 220px;
+    }
+
+    #navbar header {
+        border-bottom: 1px solid;
+    }
+}
+
+#navbar {
+    min-width: 290px;
+    height: 100%;
+    left: 0;
+}
+
+#navbar header {
+    background-color: #ffffff;
+    position: fixed;
+    max-width: 100%;
+}
+
+header {
+    text-align: center;
+    font-size: 1.8em;
+    color: black;
+    margin: 10px;
+}
+
+#navbar ul {
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#navbar li {
+    width: 100%;
+    color: #4d4e53;
+    border: 1px solid;
+    list-style: none;
+    position: relative;
+}
+
+#navbar a {
+    color: #4d4e53;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main-doc {
+    padding: 80px;
+    border: 0 0 110px 0;
+}
+
+#main-doc header {
+    text-align: left;
+    margin: 0;
+}
+
+section article {
+    color: #4d4e43;
+    padding: 15px;
+    font-size: 0.96em;
+}
+
+section li {
+    margin: 15px 0 0 20px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    background: #f7f7f7;
+}

@@ -1,11 +1,25 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: radial-gradient(red,white, red)
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: max(100%, 99vw);
+    margin-top: 0px;
+    background: white;
+    top: 0;
+}
+
+main{
+    margin-top: 150px;
 }
 
 nav{
@@ -21,9 +35,237 @@ nav li{
     display: block;
 }
 
-#logo{
+#header-img{
     max-width: max(100px, 18vw);
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    
     padding: 0.4rem;
 }
+
+
+    .header-img{
+        width: 100%;
+        height: 90px;
+        top: 0;
+    }
+
+    .large-img{
+        width: 200px;
+        height:100;
+        aspect-ratio: 26/11.5;
+    }
+        
+
+    .small-img{
+        width: 100px;
+        aspect-ratio: 18/16;
+        margin: auto 10px
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: red;
+    }
+
+    #hero{
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .our-menu,#Our_locations{
+        margin-top: 80px;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color:  rgba(243, 53, 53, 0.2);
+        
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #prevBtn {
+        left: 10px;
+        margin-right: 100px;
+      }
+  
+      #nextBtn {
+        right: 10px;
+    }
+
+    .slider-container{
+        position: relative;
+        text-align: center;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(249, 246, 246, 0.3); 
+        width: 50%;
+        margin: 0 auto;
+        font-weight:400;
+        color: #000000;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #makeOrder .icon,.our-menu .icon, #Our_locations .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 120px;
+        color: red;
+        font-size: 4em;
+    }
+
+    #makeOrder .desc, .our-menu .desc,#Our_locations .desc{
+        display: flex;
+        flex-direction: column;
+        height: 125px;
+        width:50vw;
+        text-align: center;
+
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    h4{ 
+        margin-top: 0;
+        font-family: Baskervville, serif;
+    }
+
+    h3{
+        margin-top: -5;
+        font-family: Baskervville, serif;
+    }
+    .grid{
+        display: flex;
+    }
+
+    #chickenman, #pizzaman{
+        border: 1px solid;
+        width: 50%;
+        max-width: 50%;height: 4%;
+
+        margin: 40px;
+        text-align: center;
+        color: red;
+        background: red;
+
+    }
+
+    #chickenman p, #chickenman h4, #pizzaman p, #pizzaman h4{
+        color: white;
+        bottom: 0;
+    }
+
+    #chickenman img, #pizzaman img{
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        
+    }
+    
+    #chickenman img{
+        margin-top: 13px;
+    }
+
+    #pizzaman img{
+        margin-top: 10px;
+    }
+
+    #chickenman{
+        margin-bottom: fit-content;
+    }
+
+    
+    #modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modalContent {
+        display: flex;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.1);
+    }
+
+    #Menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #cridentials label{
+        display: block;
+    }
+
+    input{
+        display: bl;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 2rem;
+        max-width: 700px;
+        font-size: min(18px,2.2em);
+    }
+    
+    #Order{
+        margin: 0 40px;
+
+
+    }
+
+    form{
+        border: 1px solid black;
+        padding: 30px 20px;
+        max-width: 700px;
+        width: auto;
+        margin: 20px auto 20px auto;
+        font-size: min(20px,2.2em);
+        background: #ff0505;
+        opacity: 0.8;
+        color: aliceblue;
+    }
+
+    @media only screen and (max-width: 768px){
+        .large-img{
+            width: 100px;
+            display: none;
+        }
+    }
+    #sliderImage {
+        max-width: 50%;
+        height: auto;
+      }
+
+    @media only screen and (min-width: 768px){
+        .small-img{
+            width: 100px;
+            display: none;
+        }
+    }

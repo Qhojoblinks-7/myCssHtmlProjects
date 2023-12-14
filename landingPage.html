@@ -5,39 +5,235 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap">
 <link rel="stylesheet" href="landingPage.css">
 <title>Title</title>
 </head>
 <body>
     <div id="page-wrapper">
         <header id="header">
-            <img src="https://pizzaman-chickenman.ceqalimited.com/image/logo3.png"
-            " alt="" id="header-img">
+            <div class="header-img">
+                    <!--Default img for small screens-->
+                    <img src="https://th.bing.com/th/id/OIP.-TeHaZ5u8k_ZU0WK1kJTCAHaHa?rs=1&pid=ImgDetMain" class="small-img"></img>
+
+                    <!--Default img for large screens-->
+                    <img src="https://pizzaman-chickenman.ceqalimited.com/image/logo3.png" alt="pizzaman-chickenman logo" class="large-img">
+            </div>
             <nav id="nav-bar">
-                    <li><a href="" class="nav-link">features</a></li>
-                    <li><a href="" class="nav-link">How it works</a></li>
-                    <li><a href="" class="nav-link">pricing</a></li>
+                    <li>
+                        <a href="#Our_locations" class="nav-link">Our locations</a>
+                    </li>
+                    <li>
+                        <a href="#Menu" class="nav-link">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#Order" class="nav-link">Order</a>
+                    </li>
             </nav>
         </header>
         <div class="container"></div>
+            <main>
         <section id="hero">
-            <h2></h2>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <label for=""></label>
-            <input type="text" id="email">
-            <input type="submit" id="submit">
-        </form>
+            <h1>Welcome to Pizzaman - Chicken Man Online!</h1>
+            <h3>
+                Indulge in the Finest Culinary Delights from the Comfort of Your Home.<br>
+                Savor the Flavors, Delight in the Experience – Bon Appétit!
+            </h3>
         </section>
-        <section id="how-it-works"></section>
-        </section>
-        <section id="pricing">
-            <dv></dv>
-            <dv></dv>
-            <dv></dv>
+        <section id="Our_locations">
+            <div class="slider-container">
+                <div class="grid">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="desc">
+                        <h2>Our Locations Across the country</h2>
+                        <h4>Explore our various locations spread across the country to enjoy the best culinary delights. Each location offers a unique experience and a taste of our delicious offerings.</h4>
+                    </div>
+                </div>
+                <button id="prevBtn" onclick="changeImage(-1)"><i class="fa-solid fa-angles-left"></i></button>
+                <figure>
+                    <img id="sliderImage" src="https://cdn.ghanaweb.com/imagelib/blog/711/71130580.jpg" alt="Description of the image">
+                    <figcaption class="caption" id="imageCaption">Caption for Image 1</figcaption>
+                  </figure>
+                <button id="nextBtn" onclick="changeImage(1)"><i class="fa-solid fa-angles-right"></i></button>
+            </div>
         </section>
         
-    </div>
+        <div class="our-menu">
+            <div class="grid">
+                <div class="icon">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                </div>
+                <div class="desc">
+                    <h2>Our Menu</h2>
+                    <h4>Embark on a gastronomic journey with our diverse menu, featuring culinary delights meticulously crafted to tantalize your taste buds.</h4>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-pizza-slice"></i>
+                </div>
+        </div>
+        <section id="Menu">
+            <div id="chickenman" class="gallery-item">
+                <div id="chicken" id="Chicken_Only">
+                    <div class="red">
+                    <h4>Chicken Man</h4>
+                    </div>
+                    <img src="https://www.palatesdesire.com/wp-content/uploads/2021/05/crispy-fried-chicken@palates-desire-720x480.jpg" alt="">
+                    <p>Discover the delectable delights of Chicken Man. Click to delve into our mouthwatering chicken menu, where each bite tells a tale of taste and satisfaction.</p>
+                </div>
+            </div>
+            <div id="pizzaman" class="gallery-item">
 
+                <div id="Pepa_Babe">
+                    <div class="red">
+                    <h4>Pizza Man</h4>
+                    
+                </div>
+                    <img src="https://external-preview.redd.it/-op8nFfKhw46GcvHlTUFW5AblU2i7lnTX5SMIttik6k.jpg?auto=webp&s=844b12f6bf452817c8f62dd94fba7f6d28435d61" alt="">
+                    <p>Embark on a flavorful journey with Pizza Man. Click to delve into our diverse pizza menu, where each slice tells a tale of taste and satisfaction.</p>
+            </div>
+            </div>
+        </section>
+        <!-- Modal container -->
+        <div id="modal">
+            <div id="modalContent"></div>
+        </div>
+        </div>
+
+        <section id="makeOrder">
+            <div class="grid">
+                <div class="icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="desc">
+                    <h2>For Deliveries</h2>
+                    <h4>Fill the form below.</h4>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-truck fa-flip-horizontal"></i>
+                </div>
+            </div>
+        </section>
+        <section id="Order">
+            <form action="">
+                <div id="name"><label for="">
+                    Full Name:
+                    <input type="text" placeholder="first name">
+                    <input type="text" placeholder="last name">
+                </label>
+            </div>
+               <div id="cridentials">
+                <label for="">
+                    Email:
+                    <input type="email">
+                </label>
+                <br>
+                <label for="">
+                    D.P.A:
+                    <input id="one" type="text" placeholder="eg. GH-123-4567">
+                </label>
+                <br>
+                <label for="">
+                    Credit Card:
+                    <input id="two" type="number">
+                </label>
+                <br>
+                <label for="">
+                    Mobile Money:
+                    <input id="3" type="number">
+                </label>
+            </div>
+            </form>
+        </section>
+                </div>
+        </section>
+    </main>
+<script>
+    let currentIndex = 0;
+
+    function changeImage(n) {
+        const imageUrls = [
+        "https://cdn.ghanaweb.com/imagelib/blog/711/71130580.jpg",
+        "https://th.bing.com/th/id/R.4628ae3cdd13c5023ae3de9227ac2920?rik=5cCaig6YxZ%2foCg&riu=http%3a%2f%2fpos.ceqalimited.com%2fuploads%2fNORTH+KAY.jpg&ehk=6DZw0bAF8wasfrFEzln5o3cbueqRML6DLUKtn8TX13U%3d&risl=&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/R.c3428e16ba0fda3707f740e1c6b18d04?rik=vULNchXRnpvhCg&riu=http%3a%2f%2fpos.ceqalimited.com%2fuploads%2fspintext+branch.jpg&ehk=aHNQaias%2fOPCtPxbV9QDiycJN2kXadE8%2fQRY0K%2b7M8o%3d&risl=&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/R.ec1867fdeb76c3efdaff4207d46065ac?rik=grvoJMYe8dH55g&riu=http%3a%2f%2fpos.ceqalimited.com%2fuploads%2fUPSA.jpeg&ehk=rQ3XV0L8Tp2bJ7Lc96jOYhDl%2bUmhbQNbrPARhnE7%2fgQ%3d&risl=&pid=ImgRaw&r=0",
+        "https://asetena.b-cdn.net/wp-content/uploads/2023/06/All-Pizzaman-and-Chickenman-Locations-in-Ghana-.jpg",
+        "https://th.bing.com/th/id/R.3226598d71ebf7180e0e131c5df55122?rik=L%2bt4CU7pI0OFYQ&riu=http%3a%2f%2fpos.ceqalimited.com%2fuploads%2fairport+branch+pizzaman.jpg&ehk=uWFWY4P1dc999sGkSQoqYdWQxBkqXsV5Ot9dLidVUe8%3d&risl=&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/R.a7444510af452347eba6d139c53c02ec?rik=gxMBIP7%2bP%2f5cdw&riu=http%3a%2f%2fpos.ceqalimited.com%2fuploads%2fDansoman+branch.jpg&ehk=vZP1Es%2foQFn5Pu1gnSX0%2fjAJwB%2bCrHPQCSgkKlhHVh4%3d&risl=&pid=ImgRaw&r=0"
+    ]; 
+
+    const captions = [
+        "Caption for Image 1",
+        "Dzurwulu",
+        "Caption for Image 3",
+        "Caption for Image 4",
+        "Caption for Image 5",
+        "Caption for Image 6",
+        "Dansoman-Exhibition Runabout",
+        // Add more captions as needed
+      ];
+
+        const totalImages = imageUrls.length;
+
+        currentIndex += n;
+
+        if (currentIndex >= totalImages) {
+            currentIndex = 0;
+        }
+
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        }
+
+        const sliderImage = document.getElementById('sliderImage');
+        sliderImage.src = imageUrls[currentIndex];
+
+        const imageCaption = document.getElementById('imageCaption');
+      imageCaption.textContent = captions[currentIndex];
+    }
+
+    // Automatically change the image every 3 seconds (adjust as needed)
+    setInterval(function () {
+        changeImage(1);
+    }, 3000);
+
+    </script>
+
+<!--<script>
+    var modal = document.getElementById("modal");
+
+    var galleryItems = document.querySelectorAll(".gallery-item");
+
+    galleryItems.forEach(function(item) {
+        item.addEventListener("mouseover", function() {
+            showModal(item);
+        });
+    });
+
+    function showModal(item) {
+        var modalContent = document.getElementById("modalContent");
+
+        // Clear existing content
+        modalContent.innerHTML = "";
+
+        // Clone the content from the hovered item and append to modalContent
+        var clonedContent = item.cloneNode(true);
+        modalContent.appendChild(clonedContent);
+
+        modal.style.display = "flex";
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+</script>-->
 </body>
 </html>

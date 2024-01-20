@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background: radial-gradient(red,white, red)
+    background: radial-gradient(rgb(250, 129, 129),white, rgb(250, 129, 129))
 }
 
 header{
@@ -14,7 +14,7 @@ header{
     position: fixed;
     width: max(100%, 99vw);
     margin-top: 0px;
-    background: white;
+    background: rgb(252, 158, 158);
     top: 0;
 }
 
